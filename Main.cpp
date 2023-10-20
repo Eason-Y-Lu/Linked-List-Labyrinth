@@ -31,7 +31,7 @@ void generateCombinations(const std::string &characters, int length, std::string
 
 int main()
 {
-    generateCombinations("NSEW", 12, "");
+    generateCombinations("NSEW", 13, "");
     return 0;
 }
 // outfile << "This text will be appended to the file." << std::endl;
