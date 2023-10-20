@@ -1,2 +1,2 @@
 # Linked-List-
-Please checkout the CPP branch and the java branch.
+Please checkout the CPP branch and the Java branch.
