@@ -1,2 +1,2 @@
 # Linked-List-Labyrinth
-Please checkout the CPP branch and the Java branch.
+Please checkout the <i>cpp</i> branch and the <i>java</i> branch.
