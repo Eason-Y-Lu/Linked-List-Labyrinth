@@ -2,6 +2,7 @@
 #include "Labyrinth.h"
 #include <iostream>
 #include <string>
+#include <fstream>
 
 /* Change this constant to contain your name.
  *
@@ -22,6 +23,7 @@ int main()
      * Note: Don't set a breakpoint on this line. Otherwise, you'll see startLocation before
      * it's been initialized.
      */
+    std::ofstream outfile("log.txt", std::ios::app);
     MazeCell *startLocation = mazeFor(kYourName);
 
     /* Set a breakpoint here to explore your maze! */
