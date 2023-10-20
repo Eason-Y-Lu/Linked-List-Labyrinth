@@ -17,7 +17,7 @@ jobs:
           sudo apt install -y gcc
       - name: Compile C++ code
         run: |
-          clang++ -O3 *.cpp -o main
+          clang++ -Ofast *.cpp -o main
       - name: Run C++ code
         run: |
           ./main

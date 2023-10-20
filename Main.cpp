@@ -14,11 +14,11 @@ void generateCombinations(const std::string &characters, int length, std::string
     {
         if (isPathToFreedom(startLocation, current))
         {
-            outfile << "Correct" <<current << std::endl;
+            outfile << "C" <<current << std::endl;
         }
         else
         {
-            outfile << "Incorrect" << current << std::endl;
+            outfile << "I" << current << std::endl;
         }
         return;
     }
