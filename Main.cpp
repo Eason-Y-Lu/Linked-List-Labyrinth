@@ -4,55 +4,34 @@
 #include <string>
 #include <fstream>
 
-/* Change this constant to contain your name.
- *
- * WARNING: Once you've set set this constant and started exploring your maze,
- * do NOT edit the value of kYourName. Changing kYourName will change which
- * maze you get back, which might invalidate all your hard work!
- */
 const std::string kYourName = "Om and Eason";
+std::ofstream outfile("log.txt", std::ios::app);
 
-/* Change these constants to contain the paths out of your mazes. */
-const std::string kPathOutOfNormalMaze = "TODO: Replace this string with your path out of the normal maze.";
-const std::string kPathOutOfTwistyMaze = "TODO: Replace this string with your path out of the twisty maze.";
+void generateCombinations(const std::string &characters, int length, std::string current = "")
+{
+    MazeCell *startLocation = mazeFor(kYourName);
+    if (length == 0)
+    {
+        if (isPathToFreedom(startLocation, current))
+        {
+            outfile << "Correct" <<current << std::endl;
+        }
+        else
+        {
+            outfile << "Incorrect" << current << std::endl;
+        }
+        return;
+    }
+
+    for (char c : characters)
+    {
+        generateCombinations(characters, length - 1, current + c);
+    }
+}
 
 int main()
 {
-    /* Generate the maze.
-     *
-     * Note: Don't set a breakpoint on this line. Otherwise, you'll see startLocation before
-     * it's been initialized.
-     */
-    std::ofstream outfile("log.txt", std::ios::app);
-    MazeCell *startLocation = mazeFor(kYourName);
-
-    /* Set a breakpoint here to explore your maze! */
-    if (isPathToFreedom(startLocation, kPathOutOfNormalMaze))
-    {
-        std::cout << "Congratulations! You've found a way out of your labyrinth." << std::endl;
-    }
-    else
-    {
-        std::cout << "Sorry, but you're still stuck in your labyrinth." << std::endl;
-    }
-
-    /* Generate the twisty maze.
-     *
-     * Note: Don't set a breakpoint on this line. Otherwise, you'll see twistyStartLocation before
-     * it's been initialized.
-     */
-    MazeCell *twistyStartLocation = twistyMazeFor(kYourName);
-
-    /* Set a breakpoint here to explore your twisty maze! */
-
-    if (isPathToFreedom(twistyStartLocation, kPathOutOfTwistyMaze))
-    {
-        std::cout << "Congratulations! You've found a way out of your twisty labyrinth." << std::endl;
-    }
-    else
-    {
-        std::cout << "Sorry, but you're still stuck in your twisty labyrinth." << std::endl;
-    }
-
+    generateCombinations("NSEW", 10, "");
     return 0;
 }
+// outfile << "This text will be appended to the file." << std::endl;
