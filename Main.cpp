@@ -6,10 +6,10 @@
 
 const std::string kYourName = "Om and Eason";
 std::ofstream outfile("log.txt", std::ios::app);
+MazeCell *startLocation = mazeFor(kYourName);
 
 void generateCombinations(const std::string &characters, int length, std::string current = "")
 {
-    MazeCell *startLocation = mazeFor(kYourName);
     if (length == 0)
     {
         if (isPathToFreedom(startLocation, current))
@@ -31,7 +31,7 @@ void generateCombinations(const std::string &characters, int length, std::string
 
 int main()
 {
-    generateCombinations("NSEW", 14, "");
+    generateCombinations("NSEW", 15, "");
     return 0;
 }
 // outfile << "This text will be appended to the file." << std::endl;
