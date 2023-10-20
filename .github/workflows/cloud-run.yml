@@ -1,0 +1,29 @@
+name: run code on cloud
+on:
+  push:
+    branches:
+      - cpp
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install C++ compilers
+        run: |
+          sudo apt install -y g++
+          sudo apt install -y clang
+          sudo apt install -y llvm
+          sudo apt install -y gcc
+      - name: Compile C++ code
+        run: |
+          clang++ -O3 *.cpp -o main
+      - name: Run C++ code
+        run: |
+          ./main
+      - name: Upload build artifact
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifact
+          path: .
