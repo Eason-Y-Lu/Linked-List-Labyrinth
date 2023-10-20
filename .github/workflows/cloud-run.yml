@@ -2,7 +2,7 @@ name: run code on cloud
 on:
   push:
     branches:
-      - *cpp*
+      - '*cpp*'
 jobs:
   build:
     runs-on: ubuntu-latest
