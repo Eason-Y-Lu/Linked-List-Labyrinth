@@ -4,20 +4,25 @@
 /**
  * Type representing an item in the maze.
  */
-enum class Item {
-    NOTHING, SPELLBOOK, POTION, WAND
+enum class Item
+{
+    NOTHING,
+    SPELLBOOK,
+    POTION,
+    WAND
 };
 
 /**
  * Type representing a cell in the maze.
  */
-struct MazeCell {
+struct MazeCell
+{
     Item whatsHere; // Which item, if any, is present.
 
-    MazeCell* north;
-    MazeCell* south;
-    MazeCell* east;
-    MazeCell* west;
+    MazeCell *north;
+    MazeCell *south;
+    MazeCell *east;
+    MazeCell *west;
 };
 
 /**
@@ -28,4 +33,4 @@ struct MazeCell {
  * the Wand. You can only take steps in the four cardinal directions,
  * and you can't move in directions that don't exist in the maze.
  */
-bool isPathToFreedom(MazeCell* start, const std::string& moves);
+bool isPathToFreedom(MazeCell *start, const std::string &moves);

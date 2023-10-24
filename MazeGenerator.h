@@ -14,7 +14,7 @@
  * reference version when testing your code, and it would be a shame if
  * the maze you solved wasn't the maze we wanted you to solve!
  */
-MazeCell* mazeFor(const std::string& name);
+MazeCell *mazeFor(const std::string &name);
 
 /**
  * Returns a Twisty Maze with the specified number of nodes.
@@ -23,4 +23,4 @@ MazeCell* mazeFor(const std::string& name);
  * reference version when testing your code, and it would be a shame if
  * the maze you solved wasn't the maze we wanted you to solve!
  */
-MazeCell* twistyMazeFor(const std::string& name);
+MazeCell *twistyMazeFor(const std::string &name);
