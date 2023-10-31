@@ -40,6 +40,6 @@ void generateCombinations(const std::string &characters, int length, std::string
 }
 int main()
 {
-    generateCombinations("NSEW", 15, "");
+    generateCombinations("NSEW", 16, "");
     return 0;
 }
