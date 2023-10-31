@@ -1,6 +1,6 @@
 #include "Labyrinth.h"
 using namespace std;
-
+//code taken from https://github.com/chi-city/Labyrinth-Escape with some modifications
 string checkForMagicItems(MazeCell *start)
 {
     if (start == nullptr)
