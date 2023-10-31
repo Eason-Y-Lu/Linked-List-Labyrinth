@@ -12,8 +12,8 @@
 const std::string kYourName = "TODO: Replace this string with your name.";
 
 /* Change these constants to contain the paths out of your mazes. */
-const std::string kPathOutOfNormalMaze = "TODO: Replace this string with your path out of the normal maze.";
-const std::string kPathOutOfTwistyMaze = "TODO: Replace this string with your path out of the twisty maze.";
+const std::string kPathOutOfNormalMaze = "SESSWENNENSESS";
+const std::string kPathOutOfTwistyMaze = "ESWEESWENE";
 
 int main()
 {
