@@ -13,8 +13,8 @@
 const std::string kYourName = "Eason";
 
 /* Change these constants to contain the paths out of your mazes. */
-const std::string kPathOutOfNormalMaze = "SESSWENNENSESS";
-const std::string kPathOutOfTwistyMaze = "ESWEESWENE";
+const std::string kPathOutOfNormalMaze = "";
+const std::string kPathOutOfTwistyMaze = "";
 std::ofstream outfile("log.txt", std::ios::app);
 MazeCell *startLocation = mazeFor(kYourName);
 MazeCell *twistyStartLocation = twistyMazeFor(kYourName);
@@ -40,6 +40,6 @@ void generateCombinations(const std::string &characters, int length, std::string
 }
 int main()
 {
-    generateCombinations("NSEW", 10, "");
+    generateCombinations("NSEW", 11, "");
     return 0;
 }
