@@ -7,7 +7,6 @@ string checkForMagicItems(MazeCell *start)
     {
         return "Nothing";
     }
-
     switch (start->whatsHere)
     {
     case Item::SPELLBOOK:
@@ -58,18 +57,11 @@ bool isPathToFreedom(MazeCell *start, const string &moves)
         wandFound = true;
     for (int i = 0; i < moves.size(); ++i)
     {
-        // error checking moves
         if (moves.at(i) != 'S' && moves.at(i) != 'N' && moves.at(i) != 'E' && moves.at(i) != 'W')
             return false;
-
-        // moving pointer
         makeMove(start, moves.at(i));
-
-        // check if pointer is null
         if (start == nullptr)
             return false;
-
-        // setting item flags
         string temp = checkForMagicItems(start);
         if (temp == "Potion")
             potionFound = true;
@@ -77,15 +69,11 @@ bool isPathToFreedom(MazeCell *start, const string &moves)
             spellBookFound = true;
         if (temp == "Wand")
             wandFound = true;
-
-        // return true if all flags were found
         if (spellBookFound == true && wandFound == true && potionFound == true && i == moves.size() - 1)
         {
             allFound = true;
             return true;
         }
-
-        // return false if not all conditions were met
         if (i == moves.size() - 1 && allFound == false)
             return false;
     }
