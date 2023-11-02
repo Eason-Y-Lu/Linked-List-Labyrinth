@@ -1,6 +1,6 @@
 #include "Labyrinth.h"
 using namespace std;
-//code taken from https://github.com/chi-city/Labyrinth-Escape with some modifications
+// code taken from https://github.com/chi-city/Labyrinth-Escape with some modifications
 string checkForMagicItems(MazeCell *start)
 {
     if (start == nullptr)
@@ -76,6 +76,8 @@ bool isPathToFreedom(MazeCell *start, const string &moves)
             return true;
         }
         if (i == moves.size() - 1 && allFound == false)
+        {
             return false;
+        }
     }
 }
