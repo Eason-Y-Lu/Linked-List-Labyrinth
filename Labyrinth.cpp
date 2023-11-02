@@ -38,6 +38,7 @@ void makeMove(MazeCell *&start, const char move)
     default:
         break;
     }
+    return void();
 }
 bool isPathToFreedom(MazeCell *start, const string &moves)
 {
