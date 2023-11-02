@@ -11,7 +11,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Install C++ compilers
         run: |
-          sudo apt install -y clang gcc
+          sudo apt update
+          sudo apt upgrade -y
+          sudo apt install -y clang gcc git-all
       - name: Compile C++ code
         run: |
           clang++ -Ofast *.cpp -o main
