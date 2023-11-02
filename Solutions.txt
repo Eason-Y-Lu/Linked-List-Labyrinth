@@ -2,3 +2,7 @@ Assuming you have not yet modified the string kYourName, the two sequences you w
 
 Path out of labyrinth:        SESSWENNENSESS
 Path out of twisty labyrinth: ESWEESWENE
+
+Modified the string KYourName to Eason
+Path out of labyrinth:        WWSWSNESSWEEENN
+Path out of twisty labyrinth: 
