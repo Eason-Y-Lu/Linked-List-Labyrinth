@@ -80,4 +80,6 @@ bool isPathToFreedom(MazeCell *start, const string &moves)
             return false;
         }
     }
+    //default to false if for loop failed for some reason
+    return false;
 }
