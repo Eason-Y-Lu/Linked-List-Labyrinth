@@ -5,4 +5,4 @@ Path out of twisty labyrinth: ESWEESWENE
 
 Modified the string KYourName to Eason
 Path out of labyrinth:        WWSWSNESSWEEENN
-Path out of twisty labyrinth: 
+Path out of twisty labyrinth: ESEEWNSENENWNS and ESWNSENEEENWNS
