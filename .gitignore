@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+#custom not tracked
+log.txt
+main
